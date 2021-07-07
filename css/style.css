@@ -23,12 +23,42 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-spartan);
+  font-family: var(--font-antonio);
   color: var(--col-primary-text);
   text-transform: uppercase;
-  line-height: 1.5;
   font-weight: 700;
-  letter-spacing: -3px;
+  letter-spacing: -0.5px;
   word-spacing: 3px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--col-border);
+}
+
+.nav-bar .title {
+  margin-top: -5px;
+}
+
+.nav-bar__hamburger {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar__hamburger__icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+}
+
+body {
+  background-image: url(/sass/img/background-stars.svg);
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
