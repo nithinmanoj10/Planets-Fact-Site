@@ -1,0 +1,34 @@
+:root {
+  --font-antonio: "Antonio", sans-serif;
+  --font-spartan: "Spartan", sans-serif;
+  --col-dark-blue: #070724;
+  --col-secondary-text: #838391;
+  --col-border: #38384f;
+  --col-primary-text: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-spartan);
+  background-color: var(--col-dark-blue);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-spartan);
+  color: var(--col-primary-text);
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: -3px;
+  word-spacing: 3px;
+}
+/*# sourceMappingURL=style.css.map */
