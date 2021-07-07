@@ -58,7 +58,7 @@ h3 {
 }
 
 body {
-  background-image: url(/sass/img/background-stars.svg);
+  background-image: url(../sass/img/background-stars.svg);
   background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
