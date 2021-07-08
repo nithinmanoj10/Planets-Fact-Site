@@ -6,11 +6,13 @@ body {
   grid-template-columns: 1fr;
 }
 
-main {
+.main {
+  position: relative;
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 40px;
 
   overflow-x: hidden;
+  width: 100%;
 }
