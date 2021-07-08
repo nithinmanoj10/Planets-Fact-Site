@@ -341,7 +341,7 @@ li {
 .planet-picture {
   grid-row: 2/3;
   margin: 60px auto;
-  background-image: url(./../img/planet-earth.svg);
+  background-image: url("/img/planet-earth.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
