@@ -80,5 +80,12 @@ const updateView = function (planet) {
   planetRevolution.innerHTML = revolution;
   planetRadius.innerHTML = radius;
   planetTemp.innerHTML = temperature;
-  planetPicture.style.backgroundImage = `url(${planetPic})`;
+  planetPicture.style.backgroundImage = `url(${getAbsoluteLink(planetPic)})`;
+};
+
+// function to make absolute link for images
+const getAbsoluteLink = function (relativeLink) {
+  const absoluteLink =
+    "https://nithinmanoj10.github.io/Planets-Fact-Site/img/" + relativeLink;
+  return absoluteLink;
 };
