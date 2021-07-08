@@ -20,6 +20,12 @@
           border-bottom: 2px solid #6d89c8;
           padding-bottom: 16px;
         }
+
+        &--active {
+          border-bottom: 2px solid #6d89c8;
+          padding-bottom: 16px;
+          color: #fff;
+        }
       }
     }
   }
@@ -46,12 +52,22 @@
       &__item {
         border: 1px solid var(--col-border);
         &__link {
+          padding-left: 20px;
           display: block;
           font-weight: 700;
           color: #fff;
+          transition: all 0.1s;
 
-          .numbering {
-            display: inline-block;
+          &--active {
+            background-color: #6d2ed5;
+            border-bottom: none;
+            padding-bottom: 18px;
+          }
+
+          &:hover {
+            border-bottom: none;
+            padding-bottom: 18px;
+            background-color: #6d2ed5;
           }
         }
       }

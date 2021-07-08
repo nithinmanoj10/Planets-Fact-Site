@@ -55,10 +55,15 @@
         &__item {
           &__link {
             display: block;
-            font-weight: 400;
+            font-weight: 100;
             font-size: 0.6em;
             color: #fff;
             text-transform: uppercase;
+
+            &--active {
+              font-weight: 700;
+              border-bottom: 1px solid var(--col-accent-blue);
+            }
           }
         }
       }
