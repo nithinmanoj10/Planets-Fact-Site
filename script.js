@@ -49,6 +49,8 @@ const getPlanetData = function (links) {
       planetsData.forEach(function (planetObject) {
         if (planetObject.name == planetLink.text) {
           updateView(planetObject);
+          changeActiveMain(planetLink);
+          changeActiveSide(planetLink);
         }
       });
     });
@@ -88,4 +90,42 @@ const getAbsoluteLink = function (relativeLink) {
   const absoluteLink =
     "https://nithinmanoj10.github.io/Planets-Fact-Site/img/" + relativeLink;
   return absoluteLink;
+};
+
+// function to change the active tab on the nav bar
+const changeActiveMain = function (planetLink) {
+  planetMainLinks.forEach(function (item) {
+    // console.log(item.firstElementChild);
+    if (
+      item.firstElementChild.classList.contains(
+        "main-menu__list__item__link--active"
+      )
+    ) {
+      console.log("wassup");
+      item.firstElementChild.classList.remove(
+        "main-menu__list__item__link--active"
+      );
+    }
+  });
+  planetLink.classList.add("main-menu__list__item__link--active");
+  console.log(planetLink);
+};
+
+// function to change active tab on the side menu bar
+const changeActiveSide = function (planetLink) {
+  planetMainLinks.forEach(function (item) {
+    // console.log(item.firstElementChild);
+    if (
+      item.firstElementChild.classList.contains(
+        "side-menu__list__item__link--active"
+      )
+    ) {
+      console.log("wassup");
+      item.firstElementChild.classList.remove(
+        "side-menu__list__item__link--active"
+      );
+    }
+  });
+  planetLink.classList.add("side-menu__list__item__link--active");
+  console.log(planetLink);
 };
