@@ -1,0 +1,20 @@
+.planet-data {
+  grid-row: 4/5;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-column: 1fr;
+  grid-row-gap: 10px;
+
+  &__box {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid var(--col-border);
+    padding: 10px 20px;
+  }
+}

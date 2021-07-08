@@ -106,6 +106,16 @@ li {
   border-bottom: 1px solid var(--col-secondary-text);
 }
 
+.planet-data__name {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.6em;
+}
+
+.planet-data__value {
+  font-weight: 400;
+}
+
 .nav-bar {
   grid-row: 1/2;
   display: flex;
@@ -168,7 +178,7 @@ li {
 }
 
 .sections {
-  grid-row: 2/3;
+  grid-row: 1/2;
 }
 
 .sections__list {
@@ -191,7 +201,7 @@ li {
 }
 
 .planet-picture {
-  grid-row: 3/4;
+  grid-row: 2/3;
   margin: 60px auto;
   background-image: url(./../img/planet-earth.svg);
   background-size: cover;
@@ -202,6 +212,7 @@ li {
 }
 
 .planet-info {
+  grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
@@ -228,10 +239,35 @@ li {
   height: 7px;
 }
 
+.planet-data {
+  grid-row: 4/5;
+  margin: 0 auto;
+  display: grid;
+  grid-column: 1fr;
+  grid-row-gap: 10px;
+}
+
+.planet-data__box {
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--col-border);
+  padding: 10px 20px;
+}
+
 body {
   background-image: url(./../img/background-stars.svg);
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr;
+}
+
+main {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */

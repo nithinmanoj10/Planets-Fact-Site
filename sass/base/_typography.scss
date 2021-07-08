@@ -101,3 +101,18 @@ li {
     border-bottom: 1px solid var(--col-secondary-text);
   }
 }
+
+///////////////////////////////////////////////////////
+// PLANET DATA
+
+.planet-data {
+  &__name {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 0.6em;
+  }
+
+  &__value {
+    font-weight: 400;
+  }
+}

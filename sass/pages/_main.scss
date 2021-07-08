@@ -5,3 +5,10 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 }
+
+main {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 40px;
+}
