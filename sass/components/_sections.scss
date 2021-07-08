@@ -34,6 +34,7 @@
 ////////////////////////////////////////
 // MEDIA QUERIES
 
+// for tablets
 @media (min-width: 700px) {
   .sections {
     grid-row: 2/3;
@@ -70,6 +71,18 @@
             background-color: #6d2ed5;
           }
         }
+      }
+    }
+  }
+}
+
+// for desktops
+@media (min-width: 1100px) {
+  .sections {
+    padding: 0%;
+    &__list {
+      &__item {
+        width: 350px;
       }
     }
   }

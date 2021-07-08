@@ -20,8 +20,19 @@ body {
 ////////////////////////////////////////
 // MEDIA QUERIES
 
+//for tablets
 @media (min-width: 700px) {
   .main {
     grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+// for desktops
+@media (min-width: 1100px) {
+  .main {
+    width: 1100px;
+    margin: 0 auto;
+
+    margin-bottom: 40px;
   }
 }

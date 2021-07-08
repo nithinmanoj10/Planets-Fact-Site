@@ -24,6 +24,7 @@
 ////////////////////////////////////////
 // MEDIA QUERIES
 
+//for tablet
 @media (min-width: 700px) {
   .planet-data {
     grid-row: 3/4;
@@ -49,5 +50,13 @@
     &__value {
       margin-bottom: 10px;
     }
+  }
+}
+
+// for desktop
+@media (min-width: 1100px) {
+  .planet-data {
+    margin-top: 80px;
+    width: 73%;
   }
 }

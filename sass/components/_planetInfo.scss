@@ -30,6 +30,7 @@
 ////////////////////////////////////////
 // MEDIA QUERIES
 
+// for tablet
 @media (min-width: 700px) {
   .planet-info {
     grid-row: 2/3;
@@ -48,5 +49,15 @@
     &__source {
       justify-content: flex-start;
     }
+  }
+}
+
+// for desktop
+@media (min-width: 1100px) {
+  .planet-info {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-left: 0%;
+    margin-top: 90px;
   }
 }

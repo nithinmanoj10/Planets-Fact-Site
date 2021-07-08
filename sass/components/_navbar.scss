@@ -31,6 +31,7 @@
 //////////////////////////////////////////
 // MEDIA QUERIES
 
+// for tablet
 @media (min-width: 700px) {
   .nav-bar {
     display: flex;
@@ -67,6 +68,26 @@
           }
         }
       }
+    }
+  }
+}
+
+// for desktop
+@media (min-width: 1100px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      flex: 0 0 120px;
+      margin: 10px 0 10px 0;
+    }
+
+    .main-menu {
+      flex: 0 0 550px;
+      margin-bottom: 0;
     }
   }
 }
