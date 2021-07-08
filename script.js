@@ -39,18 +39,24 @@ fetch("data.json")
 
 // WORKING
 const planetMainLinks = document.querySelectorAll(".main-menu__list__item");
+const planetSideLinks = document.querySelectorAll(".side-menu__list__item");
 
 // gets the planet object from data.json depensing on which link was clicked
-planetMainLinks.forEach(function (link) {
-  link.addEventListener("click", function (clickedLink) {
-    planetLink = clickedLink.target;
-    planetsData.forEach(function (planetObject) {
-      if (planetObject.name == planetLink.text) {
-        updateView(planetObject);
-      }
+const getPlanetData = function (links) {
+  links.forEach(function (link) {
+    link.addEventListener("click", function (clickedLink) {
+      planetLink = clickedLink.target;
+      planetsData.forEach(function (planetObject) {
+        if (planetObject.name == planetLink.text) {
+          updateView(planetObject);
+        }
+      });
     });
   });
-});
+};
+
+getPlanetData(planetMainLinks);
+getPlanetData(planetSideLinks);
 
 // planet is an object, gonna update the description based on the object
 const updateView = function (planet) {
@@ -64,8 +70,6 @@ const updateView = function (planet) {
   const planetRadius = document.getElementById("radius-data");
   const planetTemp = document.getElementById("temperature-data");
   const planetPicture = document.querySelector(".planet-picture");
-
-  console.log(planetRevolution, planetRotation, planetTemp, planetRadius);
 
   const { rotation, revolution, radius, temperature } = planet;
   const { planet: planetPic, internal, geology } = planet.images;
