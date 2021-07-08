@@ -8,7 +8,6 @@
   margin: 0 auto;
   padding: 15px 20px;
   width: 100%;
-  border-bottom: 1px solid var(--col-border);
   .title {
     margin-top: -5px;
   }
@@ -21,6 +20,48 @@
       width: 20px;
       height: 20px;
       vertical-align: bottom;
+    }
+  }
+
+  .main-menu {
+    display: none;
+  }
+}
+
+//////////////////////////////////////////
+// MEDIA QUERIES
+
+@media (min-width: 700px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--col-border);
+    .title {
+      margin: 10px 0 40px 0;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+
+    .main-menu {
+      display: block;
+      width: 90%;
+      margin-bottom: 10px;
+
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+          &__link {
+            display: block;
+            font-weight: 400;
+            font-size: 0.6em;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
   }
 }

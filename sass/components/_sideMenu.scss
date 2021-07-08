@@ -1,9 +1,11 @@
 .side-menu {
   position: relative;
 
-  background-color: #080808;
+  background-color: #0808086b;
   width: 100%;
   height: 0;
+
+  border-bottom: 1px solid var(--col-border);
 
   grid-row: 2/3;
   display: flex;
@@ -33,5 +35,14 @@
         display: inline-block;
       }
     }
+  }
+}
+
+/////////////////////////////////////
+// MEDIA QUERIES
+
+@media (min-width: 700px) {
+  .side-menu {
+    display: none;
   }
 }

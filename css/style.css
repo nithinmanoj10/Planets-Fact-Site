@@ -5,6 +5,7 @@
   --col-secondary-text: #838391;
   --col-border: #38384f;
   --col-primary-text: #fff;
+  --col-accent-blue: #6d89c8;
 }
 
 *,
@@ -129,7 +130,6 @@ li {
   margin: 0 auto;
   padding: 15px 20px;
   width: 100%;
-  border-bottom: 1px solid var(--col-border);
 }
 
 .nav-bar .title {
@@ -148,11 +148,46 @@ li {
   vertical-align: bottom;
 }
 
+.nav-bar .main-menu {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--col-border);
+  }
+  .nav-bar .title {
+    margin: 10px 0 40px 0;
+  }
+  .nav-bar__hamburger {
+    display: none;
+  }
+  .nav-bar .main-menu {
+    display: block;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .nav-bar .main-menu__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-bar .main-menu__list__item__link {
+    display: block;
+    font-weight: 400;
+    font-size: 0.6em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
 .side-menu {
   position: relative;
-  background-color: #080808;
+  background-color: #0808086b;
   width: 100%;
   height: 0;
+  border-bottom: 1px solid var(--col-border);
   grid-row: 2/3;
   display: flex;
   justify-content: center;
@@ -179,6 +214,12 @@ li {
 
 .side-menu__list__item__link {
   display: inline-block;
+}
+
+@media (min-width: 700px) {
+  .side-menu {
+    display: none;
+  }
 }
 
 .overlay {
@@ -210,9 +251,40 @@ li {
   padding: 18px 0;
 }
 
+.sections__list__item__link .numbering {
+  display: none;
+}
+
 .sections__list__item__link:hover {
   border-bottom: 2px solid #6d89c8;
   padding-bottom: 16px;
+}
+
+@media (min-width: 700px) {
+  .sections {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px 0;
+  }
+  .sections__list {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    border-bottom: none;
+  }
+  .sections__list__item {
+    border: 1px solid var(--col-border);
+  }
+  .sections__list__item__link {
+    display: block;
+    font-weight: 700;
+    color: #fff;
+  }
+  .sections__list__item__link .numbering {
+    display: inline-block;
+  }
 }
 
 .planet-picture {
@@ -224,6 +296,13 @@ li {
   background-repeat: no-repeat;
   height: 30vh;
   width: 30vh;
+}
+
+@media (min-width: 700px) {
+  .planet-picture {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
 }
 
 .planet-info {
@@ -254,6 +333,24 @@ li {
   height: 7px;
 }
 
+@media (min-width: 700px) {
+  .planet-info {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding-left: 10%;
+  }
+  .planet-info__heading {
+    text-align: left;
+  }
+  .planet-info__description {
+    text-align: left;
+    margin: 0%;
+  }
+  .planet-info__source {
+    justify-content: flex-start;
+  }
+}
+
 .planet-data {
   grid-row: 4/5;
   margin: 0 auto;
@@ -272,6 +369,13 @@ li {
   padding: 10px 20px;
 }
 
+@media (min-width: 700px) {
+  .planet-data {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+}
+
 body {
   background-image: url(./../img/background-stars.svg);
   background-size: cover;
@@ -287,5 +391,11 @@ body {
   margin-bottom: 40px;
   overflow-x: hidden;
   width: 100%;
+}
+
+@media (min-width: 700px) {
+  .main {
+    grid-template-columns: 1.2fr 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -16,3 +16,12 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+
+////////////////////////////////////////
+// MEDIA QUERIES
+
+@media (min-width: 700px) {
+  .main {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}

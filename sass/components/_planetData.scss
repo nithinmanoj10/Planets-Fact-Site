@@ -18,3 +18,13 @@
     padding: 10px 20px;
   }
 }
+
+////////////////////////////////////////
+// MEDIA QUERIES
+
+@media (min-width: 700px) {
+  .planet-data {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+}
