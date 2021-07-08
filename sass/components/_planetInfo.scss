@@ -1,0 +1,29 @@
+.planet-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+
+  &__heading {
+    font-weight: 400;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  &__description {
+  }
+
+  &__source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__wiki-link {
+    margin: 0 2px 0 8px;
+  }
+
+  &__icon {
+    width: 7px;
+    height: 7px;
+  }
+}

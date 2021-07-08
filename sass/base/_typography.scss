@@ -5,13 +5,20 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-antonio);
   color: var(--col-primary-text);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -0.5px;
   word-spacing: 3px;
+}
+
+p {
+  color: #fff;
+  font-weight: 100;
+  font-size: 0.7em;
 }
 
 a {
@@ -39,5 +46,58 @@ li {
         }
       }
     }
+  }
+}
+
+//////////////////////////////////////////////
+// SECTIONS-BAR
+
+.sections {
+  &__list {
+    &__item {
+      &__link {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 9px;
+        letter-spacing: 1px;
+        color: var(--col-secondary-text);
+
+        &:hover {
+          color: var(--col-primary-text);
+        }
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////
+// PLANET INFO
+
+.planet-info {
+  &__heading {
+    font-weight: 400;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  &__description {
+    line-height: 2;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__source {
+    font-size: 0.8em;
+    p {
+      color: var(--col-secondary-text);
+    }
+  }
+
+  &__wiki-link {
+    font-size: 0.7em;
+    font-weight: 100;
+    padding: 2px 0;
+    border-bottom: 1px solid var(--col-secondary-text);
   }
 }

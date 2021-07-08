@@ -1,4 +1,7 @@
 body {
   background-image: url(./../img/background-stars.svg);
   background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr;
 }

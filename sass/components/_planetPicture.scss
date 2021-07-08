@@ -1,0 +1,11 @@
+.planet-picture {
+  grid-row: 3/4;
+  margin: 60px auto;
+
+  background-image: url(./../img/planet-earth.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  width: 30vh;
+}
