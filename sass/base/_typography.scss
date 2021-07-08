@@ -13,3 +13,31 @@ h3 {
   letter-spacing: -0.5px;
   word-spacing: 3px;
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+//////////////////////////////////////////////
+// SIDE-MENU
+.side-menu {
+  &__list {
+    &__item {
+      &__link {
+        font-weight: 100;
+        font-size: 0.7em;
+        color: var(--col-secondary-text);
+        text-transform: uppercase;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

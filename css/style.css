@@ -15,6 +15,14 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--col-dark-blue);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-spartan);
   background-color: var(--col-dark-blue);
@@ -29,6 +37,26 @@ h3 {
   font-weight: 700;
   letter-spacing: -0.5px;
   word-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.side-menu__list__item__link {
+  font-weight: 100;
+  font-size: 0.7em;
+  color: var(--col-secondary-text);
+  text-transform: uppercase;
+}
+
+.side-menu__list__item__link:hover {
+  color: #fff;
 }
 
 .nav-bar {
@@ -55,6 +83,38 @@ h3 {
   width: 20px;
   height: 20px;
   vertical-align: bottom;
+}
+
+.side-menu {
+  background-color: #080808;
+  width: 50%;
+  position: absolute;
+  right: 0%;
+  transform: translateX(100%);
+  transition: all 0.3s;
+}
+
+.side-menu__list {
+  padding: 40px 50px;
+}
+
+.side-menu__list__item:not(.side-menu__list__item:last-child) {
+  padding: 0px 0px 30px 0px;
+}
+
+.side-menu__list__item__link {
+  display: block;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 58px;
+  left: 0%;
+  background-color: transparent;
+  display: none;
+  z-index: -3;
 }
 
 body {

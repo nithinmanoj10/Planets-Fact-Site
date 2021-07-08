@@ -1,7 +1,22 @@
 .side-menu {
+  background-color: #080808;
+  width: 50%;
+
+  position: absolute;
+  right: 0%;
+
+  transform: translateX(100%);
+  transition: all 0.3s;
+
   &__list {
+    padding: 40px 50px;
     &__item {
+      &:not(&:last-child) {
+        padding: 0px 0px 30px 0px;
+      }
+
       &__link {
+        display: block;
       }
     }
   }
