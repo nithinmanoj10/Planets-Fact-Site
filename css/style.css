@@ -150,7 +150,7 @@ li {
 
 .side-menu {
   background-color: #080808;
-  width: 50%;
+  width: 30%;
   position: absolute;
   right: 0%;
   z-index: 10;
@@ -159,11 +159,11 @@ li {
 }
 
 .side-menu__list {
-  padding: 40px 50px;
+  margin: 20px 0 20px 20px;
 }
 
 .side-menu__list__item:not(.side-menu__list__item:last-child) {
-  padding: 0px 0px 30px 0px;
+  margin-bottom: 20px;
 }
 
 .side-menu__list__item__link {
