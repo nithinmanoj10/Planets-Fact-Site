@@ -30,6 +30,7 @@ overlay.addEventListener("click", function () {
 // GETTING JSON DATA
 
 let planetsData;
+let currentPlanet;
 
 fetch("data.json")
   .then((response) => response.json())
@@ -48,6 +49,7 @@ const getPlanetData = function (links) {
       planetLink = clickedLink.target;
       planetsData.forEach(function (planetObject) {
         if (planetObject.name == planetLink.text) {
+          currentPlanet = planetObject;
           updateView(planetObject);
           changeActiveMain(planetLink);
           changeActiveSide(planetLink);
@@ -74,15 +76,61 @@ const updateView = function (planet) {
   const planetPicture = document.querySelector(".planet-picture");
 
   const { rotation, revolution, radius, temperature } = planet;
+  console.log(planet);
   const { planet: planetPic, internal, geology } = planet.images;
 
+  const sectionId = activeSectionTab();
+  console.log(sectionId);
+  console.log(planet);
+
+  if (sectionId == "overview") {
+    planetInfoDescription.innerHTML = planet.overview.content;
+    planetPicture.style.backgroundImage = `url(${getAbsoluteLink(planetPic)})`;
+  }
+  if (sectionId == "structure") {
+    planetInfoDescription.innerHTML = planet.structure.content;
+    planetPicture.style.backgroundImage = `url(${getAbsoluteLink(internal)})`;
+  }
+  if (sectionId == "geology") {
+    planetInfoDescription.innerHTML = planet.geology.content;
+    planetPicture.style.backgroundImage = `url(${getAbsoluteLink(geology)})`;
+  }
+
   planetInfoHeading.innerHTML = planet.name;
-  planetInfoDescription.innerHTML = planet.overview.content;
   planetRotation.innerHTML = rotation;
   planetRevolution.innerHTML = revolution;
   planetRadius.innerHTML = radius;
   planetTemp.innerHTML = temperature;
-  planetPicture.style.backgroundImage = `url(${getAbsoluteLink(planetPic)})`;
+};
+
+// SECTIONS TAB
+
+const sectionBox = document.querySelector(".sections");
+sectionBox.addEventListener("click", function () {
+  const sectionsTab = document.querySelectorAll(".sections__list__item__link");
+  sectionsTab.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      sectionsTab.forEach(function (item) {
+        item.classList.remove("active");
+      });
+      tab.classList.add("active");
+
+      console.log(currentPlanet);
+      updateView(currentPlanet);
+    });
+  });
+});
+
+const activeSectionTab = function () {
+  const sectionsTab = document.querySelectorAll(".sections__list__item__link");
+  let id;
+  sectionsTab.forEach(function (tab) {
+    if (tab.classList.contains("active")) {
+      console.log(tab.id);
+      id = tab.id;
+    }
+  });
+  return id;
 };
 
 // function to make absolute link for images
