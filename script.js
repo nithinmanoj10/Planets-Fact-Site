@@ -41,11 +41,13 @@ fetch("data.json")
 // WORKING
 const planetMainLinks = document.querySelectorAll(".main-menu__list__item");
 const planetSideLinks = document.querySelectorAll(".side-menu__list__item");
+const main = document.querySelector(".main");
 
 // gets the planet object from data.json depending on which link was clicked
 const getPlanetData = function (links) {
   links.forEach(function (link) {
     link.addEventListener("click", function (clickedLink) {
+      main.style.height = "100%";
       planetLink = clickedLink.target;
       planetsData.forEach(function (planetObject) {
         if (planetObject.name == planetLink.text) {
