@@ -41,14 +41,13 @@ li {
         color: var(--col-secondary-text);
         text-transform: uppercase;
 
-        &--active {
-          color: #fff;
-          font-weight: 700;
-        }
-
         &:hover {
           color: #fff;
         }
+      }
+      .active {
+        color: #fff;
+        font-weight: 700;
       }
     }
   }

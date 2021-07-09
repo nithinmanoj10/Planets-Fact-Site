@@ -60,11 +60,10 @@
             font-size: 0.6em;
             color: #fff;
             text-transform: uppercase;
-
-            &--active {
-              font-weight: 700;
-              border-bottom: 1px solid var(--col-accent-blue);
-            }
+          }
+          .active {
+            font-weight: 700;
+            border-bottom: 1px solid var(--col-accent-blue);
           }
         }
       }

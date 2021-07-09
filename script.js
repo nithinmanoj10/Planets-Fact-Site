@@ -41,7 +41,7 @@ fetch("data.json")
 const planetMainLinks = document.querySelectorAll(".main-menu__list__item");
 const planetSideLinks = document.querySelectorAll(".side-menu__list__item");
 
-// gets the planet object from data.json depensing on which link was clicked
+// gets the planet object from data.json depending on which link was clicked
 const getPlanetData = function (links) {
   links.forEach(function (link) {
     link.addEventListener("click", function (clickedLink) {
@@ -95,37 +95,19 @@ const getAbsoluteLink = function (relativeLink) {
 // function to change the active tab on the nav bar
 const changeActiveMain = function (planetLink) {
   planetMainLinks.forEach(function (item) {
-    // console.log(item.firstElementChild);
-    if (
-      item.firstElementChild.classList.contains(
-        "main-menu__list__item__link--active"
-      )
-    ) {
-      console.log("wassup");
-      item.firstElementChild.classList.remove(
-        "main-menu__list__item__link--active"
-      );
+    if (item.firstElementChild.classList.contains("active")) {
+      item.firstElementChild.classList.remove("active");
     }
   });
-  planetLink.classList.add("main-menu__list__item__link--active");
-  console.log(planetLink);
+  planetLink.classList.add("active");
 };
 
 // function to change active tab on the side menu bar
 const changeActiveSide = function (planetLink) {
-  planetMainLinks.forEach(function (item) {
-    // console.log(item.firstElementChild);
-    if (
-      item.firstElementChild.classList.contains(
-        "side-menu__list__item__link--active"
-      )
-    ) {
-      console.log("wassup");
-      item.firstElementChild.classList.remove(
-        "side-menu__list__item__link--active"
-      );
+  planetSideLinks.forEach(function (item) {
+    if (item.firstElementChild.classList.contains("active")) {
+      item.firstElementChild.classList.remove("active");
     }
   });
-  planetLink.classList.add("side-menu__list__item__link--active");
-  console.log(planetLink);
+  planetLink.classList.add("active");
 };
